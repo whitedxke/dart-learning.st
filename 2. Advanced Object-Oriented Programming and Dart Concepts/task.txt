@@ -1,0 +1,43 @@
+You are implementing a basic system for interaction between users, couriers and food in a food delivery service.
+
+The focus is not only on Object-Oriented Programming, but also on using constructors, getters/setters, access levels, mixins and interfaces properly.
+
+
+
+
+1. Abstract Class User:
+
+Fields: name, email. Abstract method: showRole().
+
+2. User Subclasses:
+
+Customer — has an address field, implements showRole() and prints "Customer".
+
+Courier — has a vehicleType field, implements showRole() and prints "Courier".
+
+3. Interface Orderable:
+
+Method placeOrder(Food) — implemented by Customer only.
+
+4. Mixin Trackable:
+
+Method trackLocation() — mixed into Courier and prints "Tracking location...".
+
+5. Class Food:
+
+Private fields name, price. Getters and setters with validation: price must not be negative.
+
+Method describe() or toString() — returns a string describing the dish.
+
+Constructor should include:
+ 1. Default price value.
+ 2. Validation logic for fields.
+
+6. Polymorphism:
+
+A function that takes a List<User> and calls showRole() for each user.
+
+Additional Notes:
+- Use required, named parameters and proper initialization in constructors.
+- Use final, late and private fields, where applicable to demonstrate access control.
+- Use @override annotations, as needed.

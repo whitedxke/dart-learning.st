@@ -1,0 +1,38 @@
+Food Delivery System.
+
+
+Description:
+
+There is a database for a food delivery service. The task is to describe the interaction logic between users, couriers and dishes.
+
+
+
+
+Task Structure:
+
+
+1. Abstract Class User:
+
+Fields: name, e-mail. Abstract method: showRole().
+
+2. Subclass Implementations:
+
+Customer — a customer. Additional field: address. Implements showRole(), outputs: "Customer".
+
+Courier — a courier. Additional field: vehicleType. Implements showRole(), outputs: "Courier".
+
+3. Interface Orderable:
+
+Method: placeOrder(Food).
+
+4. Class Food: 
+
+Fields: name, price. Method: describe(), outputs the information about the dish.
+
+5. Encapsulation:
+
+Make price private in the Food class and implement a getter. Also, make name private.
+
+6. Polymorphism:
+
+Write a function that accepts a list of users and calls showRole() for each user.
