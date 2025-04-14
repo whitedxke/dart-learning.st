@@ -1,0 +1,3 @@
+mixin Flyable {
+  void fly();
+}

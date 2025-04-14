@@ -1,0 +1,25 @@
+Smart Transport.
+
+Description:
+You need to create a system that describes different types of transport. 
+
+Use:
+- Mixin — to add behaviors (e.g., the ability to fly, swim, etc.);
+- Extension — to add extra methods or getters to standard types or your own classes.
+
+Your solution should include:
+
+1. A base class Transport:
+It must contain:
+- a name field,
+- a move() method — can be either abstract or regular, your choice.
+
+2. Mixins:
+Create two mixins:
+- Flyable — with a fly() method,
+- Swimmable — with a swim() method.
+
+3. Extension:
+Add an extension:
+- For the Transport class — for example, a method describe() that returns a string like: "Transport: Airplane, can fly" (depending on behavior).
+- And/or an extension on String, e.g., a capitalize() method → "car".capitalize() // Car.
