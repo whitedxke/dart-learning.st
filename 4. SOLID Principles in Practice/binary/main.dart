@@ -1,8 +1,8 @@
-import '../library/dependency_inversion_principle.dart';
-import '../library/interface_segregation_principle.dart';
-import '../library/liskov_substitution_principle.dart';
-import '../library/open_and_closed_principle.dart';
-import '../library/single_responsibility_principle.dart';
+import '../library/5. DI/dependency_inversion.dart';
+import '../library/4. IS/interface_segregation.dart';
+import '../library/3. LS/liskov_substitution.dart';
+import '../library/2. OC/open_closed.dart';
+import '../library/1. SR/single_responsibility.dart';
 
 void main() {
   // SRP Demo.
