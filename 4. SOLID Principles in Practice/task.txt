@@ -1,0 +1,55 @@
+1. S — Single Responsibility Principle.
+
+Task:
+Create classes for managing tasks in a TODO application.
+
+Requirements:
+- Store a list of tasks.
+- Ability to add and remove tasks.
+- bility to save and load tasks from a file.
+
+Rule: Each class must have a single responsibility.
+
+2. O — Open/Closed Principle.
+
+Task:
+Implement a discount system for an online store.
+
+Requirements:
+- An order has a total price.
+- There are different types of discounts: percentage, fixed amount, promo code.
+- New types of discounts should be added without modifying existing code.
+
+Rule: The system should be open for extension but closed for modification.
+
+3. L — Liskov Substitution Principle.
+
+Task:
+Create a class hierarchy for shapes: Shape, Rectangle, and Square.
+
+Requirements:
+- Add a method calculateArea().
+
+Rule: Subclasses must be able to safely substitute their base classes.
+
+4. I — Interface Segregation Principle.
+
+Task:
+Create interfaces for managing a printer.
+
+Requirements:
+- Some devices can print, scan, and fax.
+- Others can only print.
+
+Rule: Interfaces must be narrow and specific, with no unnecessary functionality.
+
+5. D — Dependency Inversion Principle.
+
+Task:
+Create a notification system.
+
+Requirements:
+- There is a NotificationService that can send emails or SMS messages.
+- Other types of notifications may be added in the future.
+
+Rule: High-level modules (like UserNotifier) should depend on abstractions, not concrete implementations.
