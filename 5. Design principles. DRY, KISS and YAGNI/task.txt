@@ -1,3 +1,91 @@
 Design principles.
 
 DRY (Don't Repeat Yourself), KISS (Keep It Simple, Stupid) and YAGNI (You Aren’t Gonna Need It).
+
+1. Task: Remove Redundant Validation Logic.
+
+You have two classes (User and Admin) that contain identical validation methods. This violates the DRY principle.
+
+class User {
+  bool isValidEmail(String email) {
+    return email.contains('@') && email.contains('.');
+  }
+
+  bool isValidPassword(String password) {
+    return password.length >= 8;
+  }
+}
+
+class Admin {
+  bool isValidEmail(String email) {
+    return email.contains('@') && email.contains('.');
+  }
+
+  bool isValidPassword(String password) {
+    return password.length >= 8;
+  }
+}
+
+Refactor the code to eliminate duplication and make the validation logic reusable.
+
+2. Task: Simplify Discount Logic. 
+
+The function below is correct but unnecessarily complex. It can be simplified without losing clarity.
+
+double calculateDiscount(double price, int quantity, bool isPremiumCustomer) {
+  if (quantity > 10) {
+    if (isPremiumCustomer) {
+      return price * 0.8;
+    } else {
+      if (price > 100) {
+        return price * 0.85;
+      } else {
+        return price * 0.9;
+      }
+    }
+  } else {
+    if (isPremiumCustomer) {
+      return price * 0.9;
+    } else {
+      return price;
+    }
+  }
+}
+
+Make the logic easier to read and maintain while keeping the same behavior.
+
+3. Task: Remove Over-Engineering. 
+
+You’re building a simple logger, but the current code introduces unnecessary flexibility by anticipating features you don’t need (yet).
+
+abstract class Logger {
+  void log(String message);
+}
+
+class FileLogger extends Logger {
+  @override
+  void log(String message) {
+    // Save to file logic (not implemented yet).
+    print("FileLogger: $message");
+  }
+}
+
+class DatabaseLogger extends Logger {
+  @override
+  void log(String message) {
+    // Save to DB logic (not implemented yet).
+    print("DatabaseLogger: $message");
+  }
+}
+
+class Application {
+  final Logger logger;
+
+  Application(this.logger);
+
+  void run() {
+    logger.log("App started");
+  }
+}
+
+Apply: remove the unused complexity and leave only what’s currently necessary for logging to console.
